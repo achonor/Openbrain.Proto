@@ -3,10 +3,16 @@
 syntax = "proto3";
 
 //协议外壳
-message MainProto{
-	int32 playerID = 1;
-	int32 messageID = 2;
-	string messageName = 3;
-	string messageData = 4;
-	double serverTime = 5;
+message root_proto{
+	int32 player_ID = 1;	//客户端标识
+	int32 message_ID = 2;	
+	string message_name = 3;
+	string message_data = 4;
+	double server_time = 5;
+}
+
+
+//登陆协议
+message req_login_game{
+	string user_name = 1;
 }
