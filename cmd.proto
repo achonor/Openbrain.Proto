@@ -1,0 +1,12 @@
+//repeated, singular
+
+syntax = "proto3";
+
+//协议外壳
+message MainProto{
+	int32 playerID = 1;
+	int32 messageID = 2;
+	string messageName = 3;
+	string messageData = 4;
+	double serverTime = 5;
+}
