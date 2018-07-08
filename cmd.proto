@@ -7,7 +7,7 @@ message root_proto{
 	int32 connect_ID = 1;	//客户端标识
 	int32 message_ID = 2;	
 	string message_name = 3;
-	string message_data = 4;
+	bytes message_data = 4;
 	double server_time = 5;
 }
 
@@ -18,4 +18,6 @@ message req_message_login_game{
 }
 
 message rep_message_login_game{
+	bool isOK = 1;
+	string testString = 2;
 }
