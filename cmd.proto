@@ -19,5 +19,4 @@ message req_message_login_game{
 
 message rep_message_login_game{
 	bool isOK = 1;
-	string testString = 2;
 }
