@@ -12,10 +12,36 @@ message root_proto{
 }
 
 
+//等级枚举
+enum enum_player_level{
+	COPPER = 0;		//青铜
+	SILVER = 1;		//白银
+	GOLD = 3;		//黄金
+	PLATINUM = 4;	//铂金
+	DIAMOND = 5;	//钻石
+}
+
+//熟练度枚举
+enum enum_player_proficiency{
+	TOE = 0;		//脚趾
+	CALF = 1;		//小腿
+	KNEE = 2;		//膝盖
+	THIGH = 3;		//大腿
+	BUTT = 4;		//屁股
+	BELLY= 5;		//肚子
+	CHEST = 6;		//胸膛
+	NECK = 7;		//脖子
+	BRAIN = 8;		//大脑	
+}
+
+
 message struct_player_info{
-	string user_ID = 1;
-	string user_name = 2;
-	string user_icon = 3;
+	string user_name = 1;
+	string user_icon = 2;						//icon
+	int32 energy = 3;							//体力
+	int32 gems = 4;								//钻石
+	enum_player_level level = 5;				//等级（新手）	
+	enum_player_proficiency proficiency = 6;	//熟练度（脚趾）
 }
 
 
@@ -23,6 +49,7 @@ message struct_player_info{
 message req_message_login_game{
 	string user_ID = 1;
 	string user_name = 2;
+	string user_icon = 3;
 }
 
 message rep_message_login_game{
