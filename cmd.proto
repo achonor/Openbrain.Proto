@@ -42,6 +42,12 @@ message struct_player_info{
 	int32 gems = 4;								//钻石
 	enum_player_level level = 5;				//等级（新手）	
 	enum_player_proficiency proficiency = 6;	//熟练度（脚趾）
+	float speed = 7;							//速度
+	float judgment = 8;							//判断力
+	float calculate = 9;						//计算力
+	float accuracy = 10;						//精确度
+	float observation = 11;						//观察力
+	float memory = 12;							//记忆力
 }
 
 
