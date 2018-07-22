@@ -48,6 +48,8 @@ message struct_player_info{
 	float accuracy = 10;						//精确度
 	float observation = 11;						//观察力
 	float memory = 12;							//记忆力
+	int32 ranking = 13;							//排名
+	int32 grade = 14;							//积分
 }
 
 
@@ -57,7 +59,6 @@ message req_message_login_game{
 	string user_name = 2;
 	string user_icon = 3;
 }
-
 message rep_message_login_game{
 	int32 isOK = 1;
 	struct_player_info player_info = 2;
@@ -67,4 +68,18 @@ message rep_message_login_game{
 //同步玩家数据
 message rep_message_player_info{
 	struct_player_info player_info = 1;
+}
+
+
+//请求开始匹配
+message req_message_start_match{
+}
+
+message rep_message_start_match{
+	int32 isOK = 1;
+}
+
+//推送匹配成功
+message rep_message_match_success{
+	struct_player_info player_info = 1;	//匹配到的玩家信息
 }
