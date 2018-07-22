@@ -74,7 +74,6 @@ message rep_message_player_info{
 //请求开始匹配
 message req_message_start_match{
 }
-
 message rep_message_start_match{
 	int32 isOK = 1;
 }
@@ -82,4 +81,16 @@ message rep_message_start_match{
 //推送匹配成功
 message rep_message_match_success{
 	struct_player_info player_info = 1;	//匹配到的玩家信息
+}
+
+//请求开始准备
+message req_message_start_ready{
+}
+message rep_message_start_ready{
+	int32 isOK = 1;
+	int32 innings = 2;					//当前是第几局
+	double start_time = 3;				//开始游戏时间
+	struct_player_info player_info = 4;	//对手信息
+	repeated int32 rand_play = 5;		//展示随机玩法
+	int32 play = 6;						//本局玩法
 }
