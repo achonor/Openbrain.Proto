@@ -11,6 +11,16 @@ message root_proto{
 	double server_time = 5;
 }
 
+//错误码枚举
+enum ERROR_CODE{
+	OK = 0;
+	
+	HAS_REFEREE = 2001; 	    	//已经在游戏中了
+	GAME_NOT_START = 2002;			//游戏未开始
+	INNINGS_GAME_HAS_END = 2003;	//本剧游戏已经结束
+	OPPONENT_NOT_FOUND = 2004;		//对手不存在
+}
+
 
 //等级枚举
 enum enum_player_level{
@@ -33,6 +43,8 @@ enum enum_player_proficiency{
 	NECK = 7;		//脖子
 	BRAIN = 8;		//大脑	
 }
+
+//玩法枚举
 
 
 message struct_player_info{
@@ -93,4 +105,28 @@ message rep_message_start_ready{
 	struct_player_info player_info = 4;	//对手信息
 	repeated int32 rand_play = 5;		//展示随机玩法
 	int32 play = 6;						//本局玩法
+}
+
+//请求开始游戏
+message req_message_start_game{
+	int32 innings = 1;		//局
+}
+message rep_message_start_game{
+	int32 isOK = 1;
+	double end_time = 2;
+}
+
+//请求同步分数
+message req_message_updata_grade{
+	int32 innings = 1;		//局
+	int32 add_value = 2;
+}
+message rep_message_updata_grade{
+	int32 isOK = 1;
+	int32 grade = 2;
+}
+
+//推送对手分手
+message rep_message_updata_opponent_grade{
+	int32 grade = 1;
 }
