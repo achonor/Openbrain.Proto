@@ -1,0 +1,21 @@
+/**
+* @file:   xls2proto/play_data.proto
+* @author: Jumbo 
+* @brief:  这个文件是通过工具自动生成的，建议不要手动修改
+*/
+
+syntax="proto3";
+
+
+message play_data{
+    /** ID */
+    uint32 id = 1;
+    /** 姓名 */
+    string name = 2;
+    /**  */
+    string icon = 3;
+}
+
+message play_data_ARRAY {
+    repeated play_data items = 1;
+}

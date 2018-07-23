@@ -1,0 +1,19 @@
+/**
+* @file:   xls2proto/emoji_data.proto
+* @author: Jumbo 
+* @brief:  这个文件是通过工具自动生成的，建议不要手动修改
+*/
+
+syntax="proto3";
+
+
+message emoji_data{
+    /** ID */
+    uint32 id = 1;
+    /**  */
+    string icon = 2;
+}
+
+message emoji_data_ARRAY {
+    repeated emoji_data items = 1;
+}

@@ -1,0 +1,14 @@
+items {
+  name: "\351\200\206\350\275\254\346\227\266\345\205\211"
+  icon: "Images\\Common\\IconDescClick"
+}
+items {
+  id: 1
+  name: "\350\256\260\345\277\206\350\277\267\351\230\265"
+  icon: "Images\\Common\\IconSpinningBlock"
+}
+items {
+  id: 2
+  name: "\350\256\260\345\277\206\347\277\273\347\211\214"
+  icon: "Images\\Common\\IconClickFlip"
+}
