@@ -14,8 +14,14 @@ message play_data{
     string name = 2;
     /** icon */
     string icon = 3;
+    /** 介绍icon */
+    string intro_icon = 4;
+    /** 介绍时间（秒） */
+    float intro_time = 5;
     /** 玩法时间（秒） */
-    uint32 time = 4;
+    float time = 6;
+    /** 玩法参数 */
+    repeated uint32 param1 = 7;
 }
 
 message play_data_ARRAY {

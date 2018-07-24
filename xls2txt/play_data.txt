@@ -1,17 +1,49 @@
 items {
   name: "\351\200\206\350\275\254\346\227\266\345\205\211"
-  icon: "Images\\Common\\IconDescClick"
-  time: 20
+  icon: "Images/Common/IconDescClick"
+  intro_icon: "Images/Play/IntroDescClick"
+  intro_time: 5.0
+  time: 20.0
+  param1: 3
+  param1: 3
+  param1: 4
+  param1: 4
+  param1: 4
+  param1: 5
+  param1: 5
+  param1: 5
+  param1: 5
+  param1: 6
 }
 items {
   id: 1
   name: "\350\256\260\345\277\206\350\277\267\351\230\265"
-  icon: "Images\\Common\\IconSpinningBlock"
-  time: 20
+  icon: "Images/Common/IconSpinningBlock"
+  intro_icon: "Images/Play/IntroSpinningBlock"
+  intro_time: 5.0
+  time: 20.0
+  param1: 3
+  param1: 3
+  param1: 4
+  param1: 4
+  param1: 4
+  param1: 5
+  param1: 5
+  param1: 5
+  param1: 5
+  param1: 6
 }
 items {
   id: 2
   name: "\350\256\260\345\277\206\347\277\273\347\211\214"
-  icon: "Images\\Common\\IconClickFlip"
-  time: 20
+  icon: "Images/Common/IconClickFlip"
+  intro_icon: "Images/Play/IntroClickFlip"
+  intro_time: 5.0
+  time: 20.0
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 4
 }

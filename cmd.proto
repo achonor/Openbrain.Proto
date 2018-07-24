@@ -103,8 +103,8 @@ message rep_message_start_ready{
 	int32 innings = 2;					//当前是第几局
 	double start_time = 3;				//开始游戏时间
 	struct_player_info player_info = 4;	//对手信息
-	repeated int32 rand_play = 5;		//展示随机玩法
-	int32 play = 6;						//本局玩法
+	repeated int32 rand_play_id = 5;	//展示随机玩法
+	int32 play_id = 6;					//本局玩法
 }
 
 //请求开始游戏
@@ -113,7 +113,10 @@ message req_message_start_game{
 }
 message rep_message_start_game{
 	int32 isOK = 1;
-	double end_time = 2;
+	int32 play_id = 2;					//本局玩法id
+	double intro_end_time = 3;			//介绍结束时间
+	double end_time = 4;				//游戏结束时间
+	struct_player_info player_info = 5;	//对手信息
 }
 
 //请求同步分数
