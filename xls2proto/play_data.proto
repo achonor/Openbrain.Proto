@@ -12,8 +12,10 @@ message play_data{
     uint32 id = 1;
     /** 姓名 */
     string name = 2;
-    /**  */
+    /** icon */
     string icon = 3;
+    /** 玩法时间（秒） */
+    uint32 time = 4;
 }
 
 message play_data_ARRAY {
