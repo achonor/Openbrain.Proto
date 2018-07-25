@@ -133,3 +133,8 @@ message rep_message_updata_grade{
 message rep_message_updata_opponent_grade{
 	int32 grade = 1;
 }
+
+//推送本局结束
+message rep_message_innings_end{
+	bool has_innings = 1;	//是否还有下一局
+}

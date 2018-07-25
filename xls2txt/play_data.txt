@@ -1,5 +1,6 @@
 items {
   name: "\351\200\206\350\275\254\346\227\266\345\205\211"
+  prefab_path: "Prefabs/Play/BackTime"
   icon: "Images/Common/IconDescClick"
   intro_icon: "Images/Play/IntroDescClick"
   intro_time: 5.0
@@ -14,10 +15,31 @@ items {
   param1: 5
   param1: 5
   param1: 6
+  param2: 10
+  param2: 10
+  param2: 20
+  param2: 20
+  param2: 20
+  param2: 30
+  param2: 30
+  param2: 30
+  param2: 30
+  param2: 50
+  param3: 5
+  param3: 5
+  param3: 10
+  param3: 10
+  param3: 10
+  param3: 15
+  param3: 15
+  param3: 15
+  param3: 15
+  param3: 25
 }
 items {
   id: 1
   name: "\350\256\260\345\277\206\350\277\267\351\230\265"
+  prefab_path: "Prefabs/Play/MemoryMaze"
   icon: "Images/Common/IconSpinningBlock"
   intro_icon: "Images/Play/IntroSpinningBlock"
   intro_time: 5.0
@@ -32,10 +54,31 @@ items {
   param1: 5
   param1: 5
   param1: 6
+  param2: 10
+  param2: 10
+  param2: 20
+  param2: 20
+  param2: 20
+  param2: 30
+  param2: 30
+  param2: 30
+  param2: 30
+  param2: 50
+  param3: 5
+  param3: 5
+  param3: 10
+  param3: 10
+  param3: 10
+  param3: 15
+  param3: 15
+  param3: 15
+  param3: 15
+  param3: 25
 }
 items {
   id: 2
   name: "\350\256\260\345\277\206\347\277\273\347\211\214"
+  prefab_path: "Prefabs/Play/MemoryCard"
   icon: "Images/Common/IconClickFlip"
   intro_icon: "Images/Play/IntroClickFlip"
   intro_time: 5.0
@@ -46,4 +89,16 @@ items {
   param1: 3
   param1: 3
   param1: 4
+  param2: 20
+  param2: 20
+  param2: 20
+  param2: 20
+  param2: 20
+  param2: 30
+  param3: 10
+  param3: 10
+  param3: 10
+  param3: 10
+  param3: 10
+  param3: 15
 }

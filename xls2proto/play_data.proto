@@ -12,16 +12,22 @@ message play_data{
     uint32 id = 1;
     /** 姓名 */
     string name = 2;
+    /** 玩法prefab路径 */
+    string prefab_path = 3;
     /** icon */
-    string icon = 3;
+    string icon = 4;
     /** 介绍icon */
-    string intro_icon = 4;
+    string intro_icon = 5;
     /** 介绍时间（秒） */
-    float intro_time = 5;
+    float intro_time = 6;
     /** 玩法时间（秒） */
-    float time = 6;
+    float time = 7;
     /** 玩法参数 */
-    repeated uint32 param1 = 7;
+    repeated uint32 param1 = 8;
+    /** 玩法参数 */
+    repeated uint32 param2 = 9;
+    /** 玩法参数 */
+    repeated uint32 param3 = 10;
 }
 
 message play_data_ARRAY {
