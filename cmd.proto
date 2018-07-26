@@ -138,3 +138,10 @@ message rep_message_updata_opponent_grade{
 message rep_message_innings_end{
 	bool has_innings = 1;	//是否还有下一局
 }
+
+//推送游戏结束
+message rep_message_game_end{
+	repeated int32 left_grade = 1;
+	repeated int32 right_grade = 2;
+	struct_player_info player_info = 5;	//对手信息
+}
