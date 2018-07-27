@@ -5,6 +5,12 @@ items {
   intro_icon: "Images/Play/IntroDescClick"
   intro_time: 5.0
   time: 20.0
+  attribute: 50
+  attribute: 20
+  attribute: 5
+  attribute: 60
+  attribute: 80
+  attribute: 90
   param1: 3
   param1: 3
   param1: 4
@@ -44,6 +50,12 @@ items {
   intro_icon: "Images/Play/IntroSpinningBlock"
   intro_time: 5.0
   time: 20.0
+  attribute: 50
+  attribute: 50
+  attribute: 20
+  attribute: 40
+  attribute: 80
+  attribute: 90
   param1: 3
   param1: 3
   param1: 4
@@ -83,6 +95,12 @@ items {
   intro_icon: "Images/Play/IntroClickFlip"
   intro_time: 5.0
   time: 20.0
+  attribute: 30
+  attribute: 50
+  attribute: 5
+  attribute: 40
+  attribute: 90
+  attribute: 100
   param1: 3
   param1: 3
   param1: 3
