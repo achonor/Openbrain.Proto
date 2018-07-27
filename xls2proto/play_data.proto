@@ -22,14 +22,16 @@ message play_data{
     float intro_time = 6;
     /** 玩法时间（秒） */
     float time = 7;
-    /** 分数影响的属性变化(万分比) */
-    repeated uint32 attribute = 8;
+    /** 期望分数比例 */
+    repeated uint32 expect_grade_scale = 8;
+    /** 属性转化率(万分比) */
+    repeated uint32 attribute = 9;
     /** 玩法参数 */
-    repeated uint32 param1 = 9;
+    repeated uint32 param1 = 10;
     /** 玩法参数 */
-    repeated uint32 param2 = 10;
+    repeated uint32 param2 = 11;
     /** 玩法参数 */
-    repeated uint32 param3 = 11;
+    repeated uint32 param3 = 12;
 }
 
 message play_data_ARRAY {

@@ -5,6 +5,12 @@ items {
   intro_icon: "Images/Play/IntroDescClick"
   intro_time: 5.0
   time: 20.0
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
   attribute: 50
   attribute: 20
   attribute: 5
@@ -50,6 +56,12 @@ items {
   intro_icon: "Images/Play/IntroSpinningBlock"
   intro_time: 5.0
   time: 20.0
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
   attribute: 50
   attribute: 50
   attribute: 20
@@ -95,6 +107,12 @@ items {
   intro_icon: "Images/Play/IntroClickFlip"
   intro_time: 5.0
   time: 20.0
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
   attribute: 30
   attribute: 50
   attribute: 5

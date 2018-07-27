@@ -144,6 +144,6 @@ message rep_message_game_end{
 	repeated int32 play_list = 1;
 	repeated int32 left_grade = 2;
 	repeated int32 right_grade = 3;
-	struct_player_info player_info = 4;	//对手信息
-	struct_player_info new_info = 5;	//新的自身属性
+	repeated float attribute_offset = 4;	//属性变化
+	struct_player_info player_info = 5;		//对手信息
 }
