@@ -560,7 +560,7 @@ class DataParser:
                         field_value_list = field_value_str.split(";")
 
                     for field_value in field_value_list :
-                        if field_type == "bytes":
+                        if field_type == "bytes" or field_type == "string":
                             item.__getattribute__(field_name).append(field_value.encode("utf8"))
                         else:
                             item.__getattribute__(field_name).append(int(float(field_value)))
