@@ -131,10 +131,10 @@ items {
   param2: 20
   param2: 20
   param2: 30
-  param3: 10
-  param3: 10
-  param3: 10
-  param3: 10
-  param3: 10
-  param3: 15
+  param4: "A"
+  param4: "B"
+  param4: "C"
+  param4: "D"
+  param4: "E"
+  param4: "G"
 }

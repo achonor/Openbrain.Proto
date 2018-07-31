@@ -32,6 +32,8 @@ message play_data{
     repeated uint32 param2 = 11;
     /** 玩法参数 */
     repeated uint32 param3 = 12;
+    /** 玩法参数 */
+    repeated string param4 = 13;
 }
 
 message play_data_ARRAY {
