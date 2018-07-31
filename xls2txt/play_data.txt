@@ -125,12 +125,12 @@ items {
   param1: 3
   param1: 3
   param1: 4
-  param2: 20
-  param2: 20
-  param2: 20
-  param2: 20
-  param2: 20
-  param2: 30
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 10
   param4: "A"
   param4: "B"
   param4: "C"
