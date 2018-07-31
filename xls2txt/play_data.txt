@@ -138,3 +138,36 @@ items {
   param4: "E"
   param4: "G"
 }
+items {
+  id: 3
+  name: "\345\271\263\345\210\206\347\247\213\350\211\262"
+  prefab_path: "Prefabs/Play/EqualColor"
+  icon: "Images/Common/IconColorBlock"
+  intro_icon: "Images/Play/IntroColorBlock"
+  intro_time: 5.0
+  time: 20.0
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  expect_grade_scale: 1
+  attribute: 50
+  attribute: 70
+  attribute: 80
+  attribute: 30
+  attribute: 90
+  attribute: 10
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 3
+  param1: 4
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 6
+  param2: 10
+}
