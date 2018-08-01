@@ -170,4 +170,16 @@ items {
   param2: 6
   param2: 6
   param2: 10
+  param3: 247
+  param3: 72
+  param3: 74
+  param3: 255
+  param3: 32
+  param3: 179
+  param3: 189
+  param3: 255
+  param3: 255
+  param3: 207
+  param3: 48
+  param3: 255
 }
