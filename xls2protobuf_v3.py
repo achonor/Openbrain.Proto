@@ -314,7 +314,7 @@ class SheetInterpreter:
         """生成PB文件的描述信息"""
         self._output.append("/**\n")
         self._output.append("* @file:   " + self._pb_file_name + "\n")
-        self._output.append("* @author: Jumbo \n")
+        self._output.append("* @author: achonor \n")
         self._output.append("* @brief:  这个文件是通过工具自动生成的，建议不要手动修改\n")
         self._output.append("*/\n")
         self._output.append("\n")
@@ -409,7 +409,7 @@ class SheetInterpreter:
 
     def _Write2File(self) :
         """输出到文件"""
-        pb_file = open(self._pb_file_name, "w+")
+        pb_file = open(self._pb_file_name, "w+", encoding='utf8')
         pb_file.writelines(self._output)
         pb_file.close()
 

@@ -1,7 +1,7 @@
 /**
 * @file:   xls2proto/emoji_data.proto
-* @author: Jumbo 
-* @brief:  这个文件是通过工具自动生成的，建议不要手动修改
+* @author: achonor 
+* @brief:  杩欎釜鏂囦欢鏄�氳繃宸ュ叿鑷姩鐢熸垚鐨勶紝寤鸿涓嶈鎵嬪姩淇敼
 */
 
 syntax="proto3";

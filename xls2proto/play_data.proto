@@ -1,7 +1,7 @@
 /**
 * @file:   xls2proto/play_data.proto
-* @author: Jumbo 
-* @brief:  Õâ¸öÎÄ¼şÊÇÍ¨¹ı¹¤¾ß×Ô¶¯Éú³ÉµÄ£¬½¨Òé²»ÒªÊÖ¶¯ĞŞ¸Ä
+* @author: achonor 
+* @brief:  è¿™ä¸ªæ–‡ä»¶æ˜¯é€šè¿‡å·¥å…·è‡ªåŠ¨ç”Ÿæˆçš„ï¼Œå»ºè®®ä¸è¦æ‰‹åŠ¨ä¿®æ”¹
 */
 
 syntax="proto3";
@@ -10,29 +10,29 @@ syntax="proto3";
 message play_data{
     /** ID */
     uint32 id = 1;
-    /** ĞÕÃû */
+    /** å§“å */
     string name = 2;
-    /** Íæ·¨prefabÂ·¾¶ */
+    /** ç©æ³•prefabè·¯å¾„ */
     string prefab_path = 3;
     /** icon */
     string icon = 4;
-    /** ½éÉÜicon */
+    /** ä»‹ç»icon */
     string intro_icon = 5;
-    /** ½éÉÜÊ±¼ä£¨Ãë£© */
+    /** ä»‹ç»æ—¶é—´ï¼ˆç§’ï¼‰ */
     float intro_time = 6;
-    /** Íæ·¨Ê±¼ä£¨Ãë£© */
+    /** ç©æ³•æ—¶é—´ï¼ˆç§’ï¼‰ */
     float time = 7;
-    /** ÆÚÍû·ÖÊı±ÈÀı */
+    /** æœŸæœ›åˆ†æ•°æ¯”ä¾‹ */
     repeated uint32 expect_grade_scale = 8;
-    /** ÊôĞÔ×ª»¯ÂÊ(Íò·Ö±È) */
+    /** å±æ€§è½¬åŒ–ç‡(ä¸‡åˆ†æ¯”) */
     repeated uint32 attribute = 9;
-    /** Íæ·¨²ÎÊı */
+    /** ç©æ³•å‚æ•° */
     repeated uint32 param1 = 10;
-    /** Íæ·¨²ÎÊı */
+    /** ç©æ³•å‚æ•° */
     repeated uint32 param2 = 11;
-    /** Íæ·¨²ÎÊı */
+    /** ç©æ³•å‚æ•° */
     repeated uint32 param3 = 12;
-    /** Íæ·¨²ÎÊı */
+    /** ç©æ³•å‚æ•° */
     repeated string param4 = 13;
 }
 
