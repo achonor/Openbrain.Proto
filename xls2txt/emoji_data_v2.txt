@@ -1,0 +1,40 @@
+items {
+  id: 0
+  icon: "Images\\Ready\\EmojiAmazing"
+}
+items {
+  id: 1
+  icon: "Images\\Ready\\EmojiAngry"
+}
+items {
+  id: 2
+  icon: "Images\\Ready\\EmojiChat"
+}
+items {
+  id: 3
+  icon: "Images\\Ready\\EmojiKiss"
+}
+items {
+  id: 4
+  icon: "Images\\Ready\\EmojiLike"
+}
+items {
+  id: 5
+  icon: "Images\\Ready\\EmojiLove"
+}
+items {
+  id: 6
+  icon: "Images\\Ready\\EmojiSad"
+}
+items {
+  id: 7
+  icon: "Images\\Ready\\EmojiSmile"
+}
+items {
+  id: 8
+  icon: "Images\\Ready\\EmojiSunglass"
+}
+items {
+  id: 9
+  icon: "Images\\Ready\\EmojiZuosi"
+}

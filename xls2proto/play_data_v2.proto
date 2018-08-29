@@ -1,27 +1,27 @@
 /**
-* @file:   xls2proto/play_data.proto
+* @file:   xls2proto/play_data_v2.proto
 * @author: achonor 
 * @brief:  这个文件是通过工具自动生成的，建议不要手动修改
 */
 
-syntax="proto3";
+syntax="proto2";
 
 
 message play_data{
     /** ID */
-    int32 id = 1;
+    optional int32 id = 1;
     /** 姓名 */
-    string name = 2;
+    optional string name = 2;
     /** 玩法prefab路径 */
-    string prefab_path = 3;
+    optional string prefab_path = 3;
     /** icon */
-    string icon = 4;
+    optional string icon = 4;
     /** 介绍icon */
-    string intro_icon = 5;
+    optional string intro_icon = 5;
     /** 介绍时间（秒） */
-    float intro_time = 6;
+    optional float intro_time = 6;
     /** 玩法时间（秒） */
-    float time = 7;
+    optional float time = 7;
     /** 期望分数比例 */
     repeated int32 expect_grade_scale = 8;
     /** 属性转化率(万分比) */

@@ -2,7 +2,7 @@
 #coding=utf-8
 
 ##
-# @file:   xls2protobuf-V3.py
+# @file:   xls2protobuf-V2.py
 # @brief:  xls 配置导表工具
 
 # 主要功能：
@@ -41,7 +41,7 @@
 #
 #
 # 开始设计的很理想，希望配置定义和配置数据保持一致,使用同一个excel
-# 不知道能否实现 
+# 不知道能否实现
 #
 # 功能基本实现，并验证过可以通过CPP解析 ohye
 #
@@ -69,7 +69,7 @@
 ##
 
 #使用：
-#python xls2protobuf-V3.py <表格名> <xls文件名>
+#python2 xls2protobuf-V2.py <表格名> <xls文件名>
 ##
 
 import xlrd # for read excel
@@ -170,7 +170,7 @@ class SheetInterpreter:
         # 保存所有结构的名字
         self._struct_name_list = []
 
-        self._pb_file_name = PROTO_FILE_OUT_PATH + sheet_name.lower() + ".proto"
+        self._pb_file_name = PROTO_FILE_OUT_PATH + sheet_name.lower() + "_v2.proto"
 
 
     def Interpreter(self) :
@@ -179,7 +179,7 @@ class SheetInterpreter:
 
         self._LayoutFileHeader()
 
-        self._output.append("syntax=\"proto3\";\n\n")
+        self._output.append("syntax=\"proto2\";\n\n")
         #self._output.append("package uFramework;\n")
 
         self._LayoutStructHead(self._sheet_name)
@@ -198,10 +198,10 @@ class SheetInterpreter:
         LogHelp.close()
         # 将PB转换成py格式
         try :
-            command = "protoc --python_out=./ " + self._pb_file_name
+            command = "protoc2 --python_out=./ " + self._pb_file_name
             os.system(command)
         except BaseException as e :
-            print ("protoc failed!")
+            print ("protoc2 failed!")
             raise
 
     def _FieldDefine(self, repeated_num) :
@@ -312,12 +312,12 @@ class SheetInterpreter:
 
     def _LayoutFileHeader(self) :
         """生成PB文件的描述信息"""
-        self._output.append("/**\n")
-        self._output.append("* @file:   " + self._pb_file_name + "\n")
-        self._output.append("* @author: achonor \n")
-        self._output.append("* @brief:  这个文件是通过工具自动生成的，建议不要手动修改\n")
-        self._output.append("*/\n")
-        self._output.append("\n")
+        self._output.append(u"/**\n")
+        self._output.append(u"* @file:   " + self._pb_file_name + "\n")
+        self._output.append(u"* @author: achonor \n")
+        self._output.append(u"* @brief:  这个文件是通过工具自动生成的，建议不要手动修改\n")
+        self._output.append(u"*/\n")
+        self._output.append(u"\n")
 
 
     def _LayoutStructHead(self, struct_name) :
@@ -353,7 +353,7 @@ class SheetInterpreter:
             return
 
         if field_rule == "optional" or field_rule == "required" :
-            filed_rule_str = ""
+            filed_rule_str = field_rule + " "
         else :
             filed_rule_str = field_rule + " "
 
@@ -409,7 +409,9 @@ class SheetInterpreter:
 
     def _Write2File(self) :
         """输出到文件"""
-        pb_file = open(self._pb_file_name, "w+", encoding='utf8')
+        pb_file = open(self._pb_file_name, "w+")#, encoding='utf8')
+        for idx in range(len(self._output)):
+            self._output[idx] = self._output[idx].encode('utf-8')
         pb_file.writelines(self._output)
         pb_file.close()
 
@@ -433,12 +435,11 @@ class DataParser:
         self._col = 0
 
         try:
-            module_path = PROTO_FILE_OUT_PATH[0:-1] + "."
-            self._module_name = module_path + self._sheet_name.lower() + "_pb2"
-            sys.path.append(os.getcwd())
-            exec('from '+self._module_name + ' import *');
+            module_path = PROTO_FILE_OUT_PATH[0:-1]# + "."
+            self._module_name = self._sheet_name.lower() + "_v2_pb2"
+            sys.path.append(os.path.join(os.getcwd(), module_path) + "\\")
+            exec('from '+ self._module_name + ' import *');
             self._module = sys.modules[self._module_name]
-            print("load module(%s) " % (self._module_name))
         except BaseException as e :
             print ("load module(%s) failed"%(self._module_name))
             raise
@@ -657,13 +658,13 @@ class DataParser:
             raise
 
     def _WriteData2File(self, data) :
-        file_name = BIN_FILE_OUT_PATH + self._sheet_name.lower() + ".bin"
+        file_name = BIN_FILE_OUT_PATH + self._sheet_name.lower() + "_v2.bin"
         file = open(file_name, 'wb+')
         file.write(data)
         file.close()
 
     def _WriteReadableData2File(self, data) :
-        file_name = TXT_FILE_OUT_PATH + self._sheet_name.lower() + ".txt"
+        file_name = TXT_FILE_OUT_PATH + self._sheet_name.lower() + "_v2.txt"
         file = open(file_name, 'wb+')
         file.write(data)
         file.close()

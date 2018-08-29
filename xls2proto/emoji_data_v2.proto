@@ -1,0 +1,19 @@
+/**
+* @file:   xls2proto/emoji_data_v2.proto
+* @author: achonor 
+* @brief:  这个文件是通过工具自动生成的，建议不要手动修改
+*/
+
+syntax="proto2";
+
+
+message emoji_data{
+    /** ID */
+    optional uint32 id = 1;
+    /**  */
+    optional string icon = 2;
+}
+
+message emoji_data_ARRAY {
+    repeated emoji_data items = 1;
+}
